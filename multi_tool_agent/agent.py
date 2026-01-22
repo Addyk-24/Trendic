@@ -44,7 +44,7 @@ vertexai.init(
 )
 
 
-class NeuroScribe:
+class Trendic:
 
     Trend_Analyzer_Agent = LlmAgent(
         name="the_scout",
@@ -78,7 +78,7 @@ class NeuroScribe:
 
                 False positives from isolated anomalies (e.g., bots or niche-only chatter)
             Report format:
-                 🔥 Trend Alert: [Trend Name]
+                Trend Alert: [Trend Name]
                         - Confidence Score: 87%
                         - Platforms: Reddit, TikTok
                         - First Spotted: 06:42 UTC
@@ -112,7 +112,7 @@ class NeuroScribe:
                 You must avoid:
                 Overgeneralizing or making assumptions without data support
             Report format:
-                🔥 Audience Insights: [Trend Name]
+                Audience Insights: [Trend Name]
                 - Key Emotions: Nostalgia, Empowerment
                 - Demographics: 18-24, predominantly
                 - Psychographics: Value authenticity, seek community validation
@@ -145,7 +145,7 @@ class NeuroScribe:
                 You must avoid:
                 Engaging with influencers who have a history of controversy or negative sentiment that could backfire on the trend.
             Report format:
-                🔥 Influencer Outreach: [Trend Name
+                Influencer Outreach: [Trend Name
                 - Influencer: @InfluencerName
                 - Reach: 1.2M followers
                 - Engagement Rate: 5.6%
@@ -178,7 +178,7 @@ class NeuroScribe:
                 You must avoid:
                 Ignoring potential risks or downplaying negative sentiment
             Report format:
-                🔥 Crisis Management: [Trend Name
+                Crisis Management: [Trend Name
                 - Potential Risk: Negative sentiment around [specific aspect of the trend]
                 - Suggested Strategy: Proactive communication addressing concerns
                 - Key Message: "We understand the concerns around [specific aspect]. Here's how we're addressing it..."
@@ -241,10 +241,10 @@ class NeuroScribe:
     )
 
 
-root_agent = NeuroScribe.root_agent
+root_agent = Trendic.root_agent
 
 def main():
-    main_agent = NeuroScribe.root_agent
+    main_agent = Trendic.root_agent
     # Session and Runner
     session_service = InMemorySessionService()
     session = session_service.create_session(app_name=APP_NAME, user_id=USER_ID, session_id=SESSION_ID)
@@ -270,4 +270,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
